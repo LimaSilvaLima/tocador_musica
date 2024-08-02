@@ -8,24 +8,26 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Player List Hashtag</h1>
-    <img src="/images/alucinacao.jpg" alt="alucinacao belchior"></img>
-    <div>
-        <div>Nome da musica</div>
-        <div>Nome da banda</div>
-        <div><i class="bi bi-heart"></i></div>
-    </div>
-    
-        
-    
-    <div>Barra de progresso</div>
-    <div>
-        <div><i class="bi bi-shuffle"></i></div>
-        <div>Voltar musica</div>
-        <div><i class="bi bi-play-circle-fill"></i></div>
-        <div><i class="bi bi-skip-end"></i></div>
-        <div><i class="bi bi-skip-start"></i></div>
-        <div><i class="bi bi-repeat"></i></div>
+    <div class="music-container">
+        <h4 id="playlist-title" >Player List Hashtag</h4>
+        <img id="cover" src="/images/alucinacao.jpg" alt="alucinacao belchior"></img>
+        <div id="below-cover">
+            <div id="song-info">
+                <div id="song-name"  class="light-color">Nome da musica</div>
+                <div id="band-name" class="light-color" >Nome da banda</div>
+            </div>
+            <div id="like" class="button"><i class="bi bi-heart"></i></div>
+        </div>
+        <div id="progress-bar" >
+            <div id="currente-progress" ></div>
+        </div>
+        <div id="button-container">
+            <div id="shuffle" class="button"><i class="bi bi-shuffle"></i></div>
+            <div id="previous" class="button" class="button-navegate"><i class="bi bi-skip-start-fill"></i></div>
+            <div id="play" class="button button biggest"><i class="bi bi-play-circle-fill"></i></div>
+            <div id="next" class="button" class="button-navegate"><i class="bi bi-skip-end-fill"></i></div>
+            <div id="repeat" class="button"><i class="bi bi-repeat"></i></div>
+        </div>
     </div>
 </body>
 </html>
