@@ -22,6 +22,7 @@ button{
     justify-content: space-around;
     align-items: center;
     margin: 3em 0 1em 0;
+    
 }
 
 #button-container{
@@ -67,11 +68,15 @@ button{
     background-color: rgb(139,153,156);
     height: 3px;
     border-radius: 15PX;
-    margin-bottom: 1em;
-}
+   }
 #currente-progress{
+    --progress :0%;
     background-color: white;
     height: inherit;
-    width: 50%;
+    width: var(--progress);
     border-radius: inherit;
+}
+
+#progress-container{
+    padding-bottom: 1em;
 }
