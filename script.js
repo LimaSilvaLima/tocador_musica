@@ -6,6 +6,7 @@ const play =document.getElementById('play');
 const next =document.getElementById('next');
 const previous =document.getElementById('previous');
 const currentProgress = document.getElementById('currente-progress');
+progressContainer = document.getElementById('progress-container');
 
 const viuvaNegra ={
     songName : 'Elastic Heart-Viuva Negra',
@@ -91,9 +92,17 @@ function pauseSong(){
         currentProgress.style.setProperty('--progress', `${barWidth}%`);
     }
 
+    function jumpTo(event){
+        const width = progressContainer.clientWidth;
+        const clickPosition =event.offsetX;
+        const jumpToTime = (clickPosition/width)*song.duration;
+        song.currentTime = jumpToTime;
+    }
+
     initilizeSong();
 
 play.addEventListener('click', playPauseDecider);
 previous.addEventListener('click', previousSong) ;
 next.addEventListener('click', nextSong);   
-song.addEventListener("timeupdate" , updateProgressBar)                                                                                                            
+song.addEventListener("timeupdate" , updateProgressBar);
+progressContainer.addEventListener('click', jumpTo);                                                                                                           
